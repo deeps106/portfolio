@@ -35,8 +35,10 @@ h1{
   padding: 0 2%;
   /* background-color: #c2d5d5; */
 }
-/* ids */
 
+
+/* ids */
+/* usinng flexbox to position items in header - logo name and menu items */
 #h1{
   display: flex;
   justify-content: space-between;
@@ -51,6 +53,8 @@ h1{
   height: 100px; */
   /* background-color: #c2d5d5; */
 }
+
+
 /* classes */
 ul li{
   display: inline-block;
@@ -66,7 +70,7 @@ ul li a{
   /* margin: 20px; */
 }
 
-
+/* changes text colour when hovering over menu items */
 ul li a:hover{
   color: #ff0000;
 }
@@ -78,10 +82,10 @@ ul li a:hover{
   background-size: contain;
 
 }
-
+/* moving hero banner(h2) statement using position with block element h2 */
 div h2{
   position:absolute;
-  top:230px; left: 900px;
+  top:230px; left: 800px;
   color: #ff0000;
   font-weight: bolder;
   font-size: 40px;

@@ -56,7 +56,16 @@ h1{
   height: 100px; */
   /* background-color: #c2d5d5; */
 }
+#about{
+  background-color: azure;
+}
+#work{
+  background-color: gray;
+}
 
+#contact{
+  background-color: aquamarine;
+}
 
 /* classes */
 ul li{
@@ -93,7 +102,14 @@ div h2{
   font-weight: bolder;
   font-size: 40px;
 }
+/* creating css grid */
 
+.page-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 300px 200px 50px;
+  
+}
 section{}
 
 ul, li{}

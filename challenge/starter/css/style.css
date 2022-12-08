@@ -12,24 +12,27 @@ body {
   line-height: 1.5;
   background-color: yellow;
 }
+/* images */
+img{
+  height: 200px;
+  width: 200px;
+}
 
 header{
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* align-items: flex-end; */
-  padding: 0 10px 5px 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ align-items: flex-end;
+  /* padding: 0 10px 5px 2px;  */
   background-color: #c2d5d5;
   width: 100%;
-  height: 100px;
+  height: 100px; */
   /* background-image: url("../images/02-hero-bg.jpg"); */
-  background-size: auto ;
+  /* background-size: auto ; */
   /* font-family: Arial, Helvetica, sans-serif; */
 }
-
-/* img{ */
-  position: absolute;
-  top:50px; left: 650px;
-}
+  
+ 
 /* styles */
 h1{
   font-size: 40px;
@@ -43,42 +46,33 @@ h1{
 /* ids */
 /* usinng flexbox to position items in header - logo name and menu items */
 #h1{
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
+  
 }
 
 #nav{
-  display: flex;
-  justify-content: end;
-  align-items: end;
+  
   /* width: 100%;
   height: 100px; */
   /* background-color: #c2d5d5; */
 }
-#about{
-  background-color: azure;
-}
-#work{
-  background-color: gray;
-}
 
-#contact{
-  background-color: aquamarine;
-}
+
+
+
 
 /* classes */
 ul li{
   display: inline-block;
-  list-style: none; 
+  list-style-type: none; 
   background-color: rgb(43, 98, 123);
 }
 
 ul li a{
-  display: block;
+  /* display: block; */
   text-decoration: none;
   padding: 0 2px;
   color: #ffffff;
+  font-size: 20px;
   /* margin: 20px; */
 }
 
@@ -89,25 +83,24 @@ ul li a:hover{
 
 .hero-banner{
   width: 100%;
-  height: 100px;
+  height: 200px;
   background-image: url("../images/02-hero-bg.jpg");
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+ 
 
 }
 /* moving hero banner(h2) statement using position with block element h2 */
 div h2{
   position:absolute;
-  top:130px; left: 600px;
+  top:140px; left: 800px;
   color: #ff0000;
   font-weight: bolder;
   font-size: 40px;
 }
-/* creating css grid */
 
-.page-wrapper{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 300px 200px 50px;
+
   
 }
 section{}
@@ -126,4 +119,35 @@ h6 {
 
 p {
   margin: 0;
+}
+
+/* creating css grid */
+
+.page-wrapper{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows:20% 1fr 1fr 1fr 1fr 1fr;
+grid-template-areas:
+"aboutme aboutme aboutme"
+"aboutme aboutme aboutme"
+"work pf-itm-1 pf-itm-2" 
+"work pf-itm-3 pf-itm-4"
+"work pf-itm-5 pf-itm-6"
+"contact contact contact";
+
+}
+
+#about{
+  background-color: #bdc1c1;
+  grid-area: aboutme;
+}
+
+#work{
+  background-color:#9fa49e;
+  grid-area: work
+}
+
+#contact{
+  background-color: aquamarine;
+  grid-area: contact ;
 }
